@@ -6,7 +6,8 @@
     </div>
     <div class="message-date">
       <!-- 投稿した時刻を出力する -->
-      <%= message.created_at %>
+      <!-- l(エル)メソッドは、指定した現地時間に対応できる。 設定:config/locals/ja.yml, applecation.rb -->
+      <%= l message.created_at %>
     </div>
   </div>
   <div class="lower-message">
