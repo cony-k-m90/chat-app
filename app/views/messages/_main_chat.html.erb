@@ -12,36 +12,9 @@
 </div>
 
 <div class="messages">
-  <div class="message">
-    <div class="upper-message">
-      <div class="message-user">
-        Tom
-      </div>
-      <div class="message-date">
-        2021/03/14(sat) 18:00:00
-      </div>
-    </div>
-    <div class="lower-message">
-      <div class="message-content">
-        こんばんは
-      </div>
-    </div>
-  </div>
-  <div class="message">
-    <div class="upper-message">
-      <div class="message-user">
-        Sim
-      </div>
-      <div class="message-date">
-        2021/03/14(sat) 18:10:00
-      </div>
-    </div>
-    <div class="lower-message">
-      <div class="message-content">
-        いい夜ですね
-      </div>
-    </div>
-  </div>
+  <%# ↓↓renderで部分テンプレート(_message.html.erb)を読み込む。↓↓%>
+  <%# collectionを使用することで、eachメソッドを使用せずにインスタンスに入っている複数の要素を繰返し表示する。%>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
