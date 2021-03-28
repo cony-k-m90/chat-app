@@ -16,6 +16,7 @@ RSpec.describe Message, type: :model do
     end
 
     it 'imageが空でも保存できること' do
+       #nil 「存在しない」という意味。0やfalse、[](空の配列)、{}(空のhash)、””(空文字)は、nilと扱われません
       @message.image = nil
       expect(@message).to be_valid
     end
